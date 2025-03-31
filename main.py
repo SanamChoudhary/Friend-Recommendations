@@ -1,9 +1,7 @@
+from network import network
 
-
-infile = open("input.txt", "r")
-contents = infile.readlines()
+infile = open("network.txt", "r")
+network = infile.readlines()
 infile.close()
 
-contents = [line.strip() for line in contents]
-
-
+print(network)
