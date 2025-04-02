@@ -1,7 +1,21 @@
 from network import network
 
-infile = open("network.txt", "r")
-network = infile.readlines()
-infile.close()
+def suggestFriends(name):
+    allPeople = []
+    for person in network:
+        if person not in allPeople:
+            allPeople.append(person)
 
-print(network)
+    currentPerson = ""
+    for person in allPeople:
+        if name == person:
+            currentPerson = person
+            break
+
+
+
+
+
+name = input("Enter a name to suggest friends for: ")
+suggestFriends(name)
+
